@@ -58,7 +58,7 @@ Output class (target)<br>
 [1: heart disease, 0: normal]
 
 
-### Clinical feature descriptions (except ``Age``, ``Sex`` and ``HeartDisease``)
+### Clinical feature descriptions (except ``Age``, ``Sex``, ``MaxHR`` and ``HeartDisease``)
 #### Chest pain type (ChestPainType)
 ``ChestPainType`` describes the type of chest pain experienced by the patient during physical activity or at rest. Chest pain is a key symptom used in the diagnosis of heart disease.
 
@@ -196,6 +196,51 @@ Shows the counts of the numerical features. The title per plot contains the skew
   - Almost symmetrical distribution, a little more patients have a heart disease than those who don't have one - this can be skipped because it is a binary feature
 
 #### Pairplot
+Shows all combinations of numerical features.
+##### Diagonal
+Shows the distribution of one variable to see if it has a different distribution for people with and without heart disease.
+- **Age:**
+  - People with heart disease tend to be a little bit older
+  - The distributions still overlap quite a lot, so this feature alone is not a perfect predictor
+- **RestingBP:**
+  - The distributions are almost the same, so this doesn't tell us very much
+  - This is a weak indicator
+- **Cholesterol:**
+  - This has quite a significant difference, but you need to be aware that Cholesterol values equal to zero are implausible
+  - If you would imagine all the zero-values gone or replaced by the mean, based on what the rest of the distributions look like, it would probably overlap more than it does now
+  - Hard to say if this is a strong indicator because it probably isn't totally accurate
+- **FastingBS:**
+  - People with heart disease are more likely to have a resting blood sugar value greater than 120 mg/dl (1)
+  - This is quite a strong indicator
+- **MaxHR:**
+  - It is clearly visible that people who have a heart disease also have a lower maximum heart rate
+  - This is a strong indicator
+- **Oldpeak:**
+  - People with heart disease have a generally higher oldpeak
+  - This is a very strong indicator
+
+##### Scatterplots
+Shows the relationship between two variables. The most interesting ones (visually):
+- **Age vs MaxHR:**
+  - Clear negative relationship (the older the patient, the lower the maximum heart rate)
+  - The datapoints of people with heart disease are more clustered around low MaxHR with higher Age
+- **Oldpeak vs MaxHR:**
+  - The combination of a high Oldpeak and low MaxHR mostly leads to a patient with heart disease
+- **Cholesterol:**
+  - Overlaps a lot with the other variables
+  - Less distinction than you would maybe expect
+- **RestingBP:**
+  - No strong distinction, so it is probably a weak predictor
+- **FastingBS:**
+  - There are relatively more patients with heart disease in FastingBS = 1
+
+MaxHR and Oldpeak overall have the best distinction between heart disease and no heart disease with other features.
+
+#### Boxplot
+
+
+#### Correlation matrix
+
 
 
 ## 02-preprocessing.ipynb
