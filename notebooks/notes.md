@@ -292,6 +292,9 @@ Important for multicollinearity:
   - Older patients show more ST depression
 
 #### Pairplot vs boxplots vs correlation matrix
+- All strong relationships and correlations are visually confirmed
+- Weak correlations show heavy overlap
+- Confirms a consistent EDA
 
 ## 02-preprocessing.ipynb
 
