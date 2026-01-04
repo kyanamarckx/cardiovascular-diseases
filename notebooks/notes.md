@@ -270,8 +270,28 @@ Compares central tendency (median), spread (IQR) and outliers between groups.
   - Strong positive indicator
 
 #### Correlation matrix
+Measures linear association between features.
 
+##### Correlations with HeartDisease (most important row)
+| Feature | Correlation | Strength | Interpretation |
+| :------ | :---------: | :------: | -------------- |
+| Oldpeak | +0,404 | Strong | Best positive predictor |
+| MaxHR | -0,400 | Strong | Best negative predictor |
+| Age | +0,282 | Moderate | Risk increases with age |
+| FastingBS | +0,267 | Moderate | Diabetes-related risk |
+| Cholesterol | -0,233 | Weak | Data quality issues |
+| RestingBP | +0,108 | Weak | Minimal standalone value |
 
+##### Feature-feature relationships
+Important for multicollinearity:
+- **Age vs MaxHR:**
+  - ``r = -0,382``
+  - Older patients reach lower maximum heart rates
+- **Age vs Oldpeak:**
+  - ``r = +0,259``
+  - Older patients show more ST depression
+
+#### Pairplot vs boxplots vs correlation matrix
 
 ## 02-preprocessing.ipynb
 
