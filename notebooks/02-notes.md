@@ -33,7 +33,7 @@ A numerical and categorical pipeline was made to automize the preprocessing.
 
 An imputer was used in both numerical en categorical pipelines; a median strategy for numerical features and most frequent strategy for categorical features. The choice of using median over mean was conciously made. The dataset is a bit skewed and has some outliers here and there, and because the mean is affected by outliers and the median is not, it was pretty straightforward to use the median over mean strategy.
 
-The categorical pipeline also implements one-hot encoding. Note that the numerical pipeline doesn't implement a scaler; this is because tree-based models don't require them and since we will train our data on Random Forrest and XGBoost (which are both tree-based classifiers), we don't need a scaler.
+The categorical pipeline also implements one-hot encoding. Note that the numerical pipeline doesn't implement a scaler; this is because tree-based models don't require them and since we will train our data on Random Forest and XGBoost (which are both tree-based classifiers), we don't need a scaler.
 
 ## Feature subsets
 Six different subsets were created to train the models on so we can see if feature subsets have an influence on model performance.
