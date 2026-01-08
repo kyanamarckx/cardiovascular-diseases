@@ -1,6 +1,8 @@
 model,feature_subset,best_cv,cv_roc_auc,best_params,model_path
 XGBoost,all,10,0.9290823937428352,"{'classifier__learning_rate': 0.03, 'classifier__max_depth': 3, 'classifier__n_estimators': 200, 'classifier__subsample': 0.7}",../models/XGBoost_all_cv10.joblib
 RandomForest,all,10,0.9274379289829204,"{'classifier__max_depth': None, 'classifier__min_samples_leaf': 5, 'classifier__n_estimators': 300}",../models/RandomForest_all_cv10.joblib
+XGBoost,paper,10,0.9196210076473234,"{'classifier__learning_rate': 0.03, 'classifier__max_depth': 3, 'classifier__n_estimators': 200, 'classifier__subsample': 0.9}",../models/XGBoost_paper_cv10.joblib
+RandomForest,paper,10,0.9190539883621378,"{'classifier__max_depth': 5, 'classifier__min_samples_leaf': 5, 'classifier__n_estimators': 100}",../models/RandomForest_paper_cv10.joblib
 XGBoost,FS-3,10,0.9177736421284809,"{'classifier__learning_rate': 0.03, 'classifier__max_depth': 3, 'classifier__n_estimators': 200, 'classifier__subsample': 0.7}",../models/XGBoost_FS-3_cv10.joblib
 RandomForest,FS-1,5,0.9162028882359255,"{'classifier__max_depth': 10, 'classifier__min_samples_leaf': 10, 'classifier__n_estimators': 300}",../models/RandomForest_FS-1_cv5.joblib
 XGBoost,FS-1,10,0.9159684674879923,"{'classifier__learning_rate': 0.03, 'classifier__max_depth': 3, 'classifier__n_estimators': 100, 'classifier__subsample': 0.8}",../models/XGBoost_FS-1_cv10.joblib
